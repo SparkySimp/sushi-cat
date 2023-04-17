@@ -1,0 +1,10 @@
+[discord]
+token = "<your token>"
+prefix = "!"
+
+[database]
+host = "localhost"
+port = 8086
+username = "bot"
+password = "<your password>"
+database = "your_mother"
