@@ -3,6 +3,18 @@ use std::io::prelude::*;
 use serde::{Deserialize, Serialize};
 use serenity::{prelude::*, framework::standard::Command};
 
+// lib required for slash commands
+use serenity::framework::standard::macros::group;
+use serenity::framework::standard::macros::command;
+use serenity::framework::standard::Args;
+use serenity::framework::standard::CommandResult;
+use serenity::model::channel::Message;
+use serenity::model::id::UserId;
+use serenity::model::interactions::application_command::ApplicationCommandInteractionDataOptionValue;
+use serenity::model::interactions::application_command::ApplicationCommandOptionType;
+use serenity::model::interactions::Interaction;
+
+
 // Represents serializable Discord bot configuration
 #[derive(Serialize, Deserialize)]
 struct DiscordConfig {
@@ -50,6 +62,8 @@ fn create_ping_command() -> Command {
         Ok(())
     })
 }
+
+
 
 #[tokio::main]
 async fn main() {
